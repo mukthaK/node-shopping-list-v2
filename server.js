@@ -65,7 +65,7 @@ app.post('/recipes', jsonParser, (req, res) => {
   }
 
   const item = Recipes.create(req.body.name,  req.body.ingredients);
-  res.json(Recipes.get());
+  res.status(201).json(item);
 });
 
 
